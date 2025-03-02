@@ -1,9 +1,6 @@
-# WebScrapingDemo
-A snippet of a BI Platform I contributed during my Software Engineering Internship
+# E-commerce Analytics Platform for Product Review Analysis
 
-# Business Intelligence Platform for Product Review Analysis
-
-# **Project Description & Purpose**
+## ⚡ **Project Description & Purpose**
 
 **Experience:** Software Developer Internship at a Consulting Firm, National Taiwan University
 
@@ -13,7 +10,7 @@ This process was optimized when my team and I developed a **Business Intelligenc
 
 ---
 
-## **How Does the Platform Work?**
+## 🤔 **How Does the Platform Work?**
 
 ### **Input:**
 - `website_url`: The URL of the online forum or website to scrape.
@@ -31,7 +28,7 @@ This process was optimized when my team and I developed a **Business Intelligenc
 
 ---
 
-## **How the Agents Work**
+## 🤖 **How the Agents Work**
 
 Each agent is powered by an **LLM with a specific role, background, and task**. Their primary function is to **inspect HTML content**, identify the necessary elements for scraping, and validate them using **Selenium**. Once the correct HTML tags are identified, they are stored in the **knowledge base** for future reference.
 
@@ -51,8 +48,11 @@ All agents operate under a **feedback loop** to ensure accuracy:
 5. **Knowledge Base Update:** Once successful, the correct HTML tags are stored in the **knowledge base**, allowing the system to bypass inspection for future scrapes of the same website.
 
 ---
-## Demo 
+## 💻 Demo 
 ### User Interface
+
+![End Result](https://github.com/Tatiwuli/WebScrapingDemo/blob/main/readme_media/end_result_demo.mov)
+
 
 **Check out the Notion page for** 
 ✅ Screen recordings of Selenium scraping data autonomously  
@@ -62,7 +62,7 @@ All agents operate under a **feedback loop** to ensure accuracy:
 
 
 
-## **My Contributions**
+## 👩🏻‍💻 **My Contributions**
 - **Ideated and designed** the agent framework and feedback mechanism with another Software Engineer.
 - **Engineered LLM prompts** for the HTML inspection agents.
 - **Developed agent scripts (HTML inspection), scraping tools, and the `run_scraper` file** to manage the HTML inspection and scraping workflow.
@@ -70,13 +70,13 @@ All agents operate under a **feedback loop** to ensure accuracy:
 
 ---
 
-## **Impact**
+## 🥳 **Impact**
 This platform improved **product review collection efficiency by 50%** while achieving **95% data accuracy** in extracted post reviews, enabling deeper consumer insights with greater efficiency.
 
 ---
 
-## **Next Steps**
-To scale this tool for broader adoption, the following improvements are needed:
+## 🚲 **Next Steps**
+To scale this tool for more companies, the following improvements are needed:
 
 ### **Enhancing User Experience**
 - Implement a **more engaging loading interface** during HTML inspection and scraping:  
