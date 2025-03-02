@@ -1,0 +1,43 @@
+{
+  "url": "https://www.mobile01.com/",
+  "sections": {
+    "search_section": {
+      "search_bar": {
+        "selector": "id",
+        "value": "keyword"
+      }
+    },
+    "sort_section": {
+      "sort_dropdown": {
+        "selector": "css selector",
+        "value": "div.gsc-option-menu-container"
+      },
+      "sort_date_option": {
+        "selector": "xpath",
+        "value": "//div[@class='gsc-option-menu-item']/div[text()='日期']"
+      }
+    },
+    "extract_posts_section": {
+      "blog_item": {
+        "selector": "class name",
+        "value": "gsc-webResult"
+      },
+      "blog_url": {
+        "selector": "css selector",
+        "value": ".gs-title a"
+      },
+      "blog_date": {
+        "selector": "css selector",
+        "value": ".gs-snippet"
+      },
+      "next_page_button": {
+        "selector": "css selector",
+        "value": "div.gsc-cursor-page[aria-label='第 {page_num} 頁']"
+      },
+      "cookie_close_button": {
+        "selector": "css selector",
+        "value": "button[aria-label='close cookie message']"
+      }
+    }
+  }
+}

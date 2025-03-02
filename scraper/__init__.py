@@ -1,0 +1,1 @@
+from .run_scraper import MarketScraper
