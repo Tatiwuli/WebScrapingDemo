@@ -51,10 +51,11 @@ All agents operate under a **feedback loop** to ensure accuracy:
 ## 💻 Demo 
 ### User Interface
 
-![End Result](https://github.com/Tatiwuli/WebScrapingDemo/blob/main/readme_media/end_result_demo.mov)
+![End Result](https://github.com/Tatiwuli/WebScrapingDemo/blob/main/user-interface-demo.gif)
 
 
 **Check out the Notion page for** 
+
 ✅ Screen recordings of Selenium scraping data autonomously  
 ✅ Terminal output screenshots showcasing each step of the process  
 
