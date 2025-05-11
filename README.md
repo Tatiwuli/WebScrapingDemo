@@ -4,7 +4,7 @@
 
 **Experience:** Software Developer Internship at a Consulting Firm, National Taiwan University
 
-In Taiwan, online forums like Mobile01 are popular platforms where users share product experiences and recommendations. While e-commerce platforms provide built-in access to customer reviews, companies struggle to efficiently gather insights from forums. A business department of one of our clients spent **4+ hours per report** manually searching for product reviews, organizing data in spreadsheets, and analyzing them for the **executive board**.  
+In Taiwan, online forums like Mobile01 are popular platforms where users share product experiences and recommendations. While e-commerce platforms provide built-in access to customer reviews, companies struggle to efficiently gather insights from forums. A business department of one of our clients spent **4+ hours per report** manually searching for product reviews, organizing data in spreadsheets, and analyzing them for the **executive board**. When they want qualitative data, they would spent 450 hours and USD$600 for user interviews.
 
 This process was optimized when my team and I developed a **Business Intelligence platform** that scrapes product reviews from online forums and generates **data analysis reports** using **Python, OpenAI, and Streamlit**.
 
