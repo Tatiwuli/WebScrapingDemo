@@ -105,13 +105,13 @@ class MarketScraper:
             return False
 
         print("✅ [SUCCESS] Search HTML tags successfully inspected.")
-        print(f"🔗 [INFO] Result Page URL: {result_page_url}\n")
+        print(f" [INFO] Result Page URL: {result_page_url}\n")
 
-        print("🚀 [STEP 2] Initializing a new driver for the next steps...")
+        print(" Initializing a new driver for the next steps...")
         self.init_driver()
         self.get_url(result_page_url)
 
-        print("\n🔍 [STEP 3] Inspecting HTML Tags for Sorting...")
+        print("\n Inspecting HTML Tags for Sorting...")
         sort_success = sort_agent.learn(
             url=self.home_url, result_page_url=result_page_url, driver=self.driver)
 
@@ -122,7 +122,7 @@ class MarketScraper:
 
         print("✅ [SUCCESS] Sorting HTML tags successfully inspected.\n")
 
-        print("🔍 [STEP 4] Inspecting HTML Tags for Extracting Results...")
+        print(" Inspecting HTML Tags for Extracting Results...")
         extract_success = extract_agent.learn(
             url=self.home_url, result_page_url=result_page_url, driver=self.driver)
 
@@ -133,7 +133,7 @@ class MarketScraper:
 
         print("✅ [SUCCESS] Extracting Results HTML tags successfully inspected.\n")
 
-        print("🔍 [STEP 5] Inspecting HTML Tags for Changing Pages...")
+        print("Inspecting HTML Tags for Changing Pages...")
         change_page_success = change_page_agent.learn(
             url=self.home_url, result_page_url=result_page_url, driver=self.driver)
 
@@ -144,7 +144,7 @@ class MarketScraper:
 
         print("✅ [SUCCESS] Changing Pages HTML tags successfully inspected.\n")
 
-        print("🎯 [COMPLETED] HTML inspection process finished successfully!")
+        print(" [COMPLETED] HTML inspection process finished successfully!")
         return True
 
 
@@ -154,14 +154,14 @@ class MarketScraper:
         # search
         if "search_section" in tools:
             search_function =  tools['search_section']
-            print(f"🔎 Searching for {self.keyword}\n")
+            print(f" Searching for {self.keyword}\n")
 
             search_function(driver=self.driver, keyword= self.keyword)
 
         # initiate another driver for skipping captcha
         result_page_url = self.driver.current_url
 
-        print(f"\n🔗Result page url: {result_page_url}")
+        print(f"\nResult page url: {result_page_url}")
         self.close_driver()
 
         print(f"\nStarting a new driver for Sorting")
@@ -174,7 +174,7 @@ class MarketScraper:
         if "sort_section" in tools:
 
             sort_function = tools['sort_section']
-            print(f"\n🗃️ Sorting results\n")
+            print(f"\n🗃 Sorting results\n")
 
             sort_function(driver=self.driver)
 
@@ -182,7 +182,7 @@ class MarketScraper:
         if "extract_posts_section" in tools:
 
             extract_posts_function = tools['extract_posts_section']
-            print(f"\n🕸️ Extracting results\n")
+            print(f"\n Extracting results\n")
 
             # Call the tool's __call__ method directly
             posts_data = extract_posts_function(
@@ -208,26 +208,26 @@ class MarketScraper:
         knowledge = knowledge_base.search_knowledge()
         if not knowledge:
             print("\n There is no knowledge for this website.")
-            print("🤖 Triggering agents to inspect the HTML")
+            print(" Triggering agents to inspect the HTML")
             
             
             inspect_success = self.inspect_html() 
             if inspect_success == False:
-                print("❌ Inspection failed! Human intervention required. Stopping execution.")
+                print("⚠️[ERROR] Inspection failed! Human intervention required. Stopping execution.")
                 self.close_driver()  
                 sys.exit(1)  
 
-            print("\n🎉 Successfuly learned all the HTML tags to scrape this website!")
+            print("\n ✅[SUCCESS] Successfuly learned all the HTML tags to scrape this website!")
 
         #Search Knowledge again after inspecting 
         knowledge = knowledge_base.search_knowledge()
 
-        print("\nUpdating knowledge and preparing the tools to scrape 🧰")
+        print("\nUpdating knowledge and preparing the tools to scrape ")
         tools = self.get_tools(knowledge)
-        print("\nScraping the website 🕸️")
+        print("\nScraping the website ")
         posts_urls = self.extract_urls(tools= tools,
              time_range_days=time_range_days)
-        print("\nFinished Scraping the Website 🥳🥳")
+        print("\n ✅[SUCCESS] Finished Scraping the Website")
         print(posts_urls)
 
         self.close_driver()
