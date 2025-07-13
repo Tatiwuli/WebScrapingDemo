@@ -32,9 +32,7 @@ Your goal is to produce output in the specified JSON format. The JSON output sho
 **Notes:**
 - Use only one of these selector types: "id", "name", "xpath", "css selector", "class name".
 - For the dropdown menu, **ensure that the selector accurately locates the clickable element that opens the menu**, not just the currently selected option.
-- The dropdown menu should include `div.gsc-option-menu-container`, which expands when clicked.
 - The specific sorting option should be an interactive element that matches the target text in the user prompt.
-- **Do not return `.gsc-selected-option-container` as it represents the selected value, not the clickable dropdown menu**.
 - If you cannot find a stable dropdown or option, use "none" for both the selector and value.
 - Return the output in JSON format, strictly following the structure above.
 """
